@@ -11,7 +11,7 @@ function registerUser() {
     let email = prompt("Enter your email address:");
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address (example@domain.com).");
+        alert("Please enter a valid email address.");
         return;
     }
 
@@ -38,14 +38,10 @@ function registerUser() {
     // AGE
     let age = prompt("Enter your age:");
     if (isNaN(age) || Number(age) < 18) {
-        alert("You must be 18 years or older to register.");
+        alert("You must be 18 years or older.");
         return;
     }
 
     // SUCCESS
     alert("✅ Registration successful!");
 }
-
-// Call the function
-registerUser();
-
